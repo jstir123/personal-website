@@ -12,6 +12,18 @@ a {
     color: #fff;
     text-decoration: none;
 }
+
+h1 {
+    font-size: 3em;
+}
+
+h3 {
+    font-size: 1.75em;
+}
+
+p {
+    font-size: 1.25em;
+}
   
 .background-container{
     position: fixed;
@@ -23,7 +35,7 @@ a {
 }
 
 .stars {
-    background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+    background: black url(./images/stars.png) repeat;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -37,7 +49,7 @@ a {
 .twinkling{
     width: 10000px;
     height: 100%;
-    background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png") repeat;
+    background: transparent url(./images/twinkling.png) repeat;
     background-size: 1000px 1000px;
     position: absolute;
     right: 0;

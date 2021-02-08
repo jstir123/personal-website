@@ -1,6 +1,8 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
 
+import ProfileHeader from '../components/ProfileHeader';
+
 const useStyles = createUseStyles({
     home: {
         // background: 'lightblue'
@@ -15,7 +17,7 @@ const Home = () => {
 
     return (
         <div className={classes.home}>
-            
+            <ProfileHeader />
         </div>
     );
 }
