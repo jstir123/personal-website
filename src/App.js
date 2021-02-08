@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { createUseStyles } from 'react-jss';
 
 import Home from './pages/Home';
+import NavBar from './components/NavBar';
 
 const useStyles = createUseStyles({
     app: {
@@ -34,19 +35,25 @@ const App = () => {
     return (
         <Router>
             <div className={classes.app}>
+
                 <div className='background-container'></div>
                 <div className='stars'></div>
                 <div className='twinkling'></div>
-                <div className={classes.navbar}>
 
+                <div className={classes.navbar}>
+                    <NavBar />
                 </div>
+
                 <Switch>
                     <div className={classes.content}>
+
                         <Route exact path='/'>
                             <Home />
                         </Route>
+                        
                     </div>
                 </Switch>
+                
             </div>
         </Router>
     );

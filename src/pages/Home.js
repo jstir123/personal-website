@@ -15,7 +15,7 @@ const Home = () => {
 
     return (
         <div className={classes.home}>
-            <h1 className={classes.h1}>Welcome!</h1>
+            
         </div>
     );
 }

@@ -4,6 +4,13 @@ html, body, #root {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
 }
   
 .background-container{
