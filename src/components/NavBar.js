@@ -15,8 +15,8 @@ const useStyles = createUseStyles({
         margin: '1.5em',
         fontSize: '2em',
         fontWeight: 'bold',
-        color: '#000',
-        WebkitTextStroke: ' .01pt orange',
+        color: 'orange',
+        // WebkitTextStroke: ' .01pt orange',
         transition: '.5s',
         '&:hover': {
             transform: 'scale(1.1)',

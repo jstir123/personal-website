@@ -13,10 +13,18 @@ a {
     text-decoration: none;
 }
 
-h1 {
+/* h1 {
     font-size: 3.5em;
-    color: #000;
-    -webkit-text-stroke: .01px orange;
+    color: purple;
+    -webkit-text-stroke: .1px orange;
+} */
+
+h1 {
+    font-size: 80px;
+    text-align: center;
+    font-weight: lighter;
+    color: #fff;
+    animation: glow 5s ease-in-out infinite alternate;
 }
 
 h3 {
@@ -119,5 +127,14 @@ p {
     }
     to { 
         top: -5000px; -webkit-transform: translate3d(0px, 0px, -2500px) rotateX(25deg);
+    }
+}
+
+@keyframes glow {
+    from {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px purple, 0 0 20px purple, 0 0 25px purple, 0 0 30px purple, 0 0 35px purple;
+    }
+    to {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px purple, 0 0 40px purple, 0 0 50px purple, 0 0 60px purple, 0 0 70px purple;
     }
 }
