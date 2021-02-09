@@ -9,32 +9,7 @@ html, body, #root {
 }
 
 a {
-    color: #fff;
     text-decoration: none;
-}
-
-/* h1 {
-    font-size: 3.5em;
-    color: purple;
-    -webkit-text-stroke: .1px orange;
-} */
-
-h1 {
-    font-size: 80px;
-    text-align: center;
-    font-weight: lighter;
-    color: #fff;
-    animation: glow 5s ease-in-out infinite alternate;
-}
-
-h3 {
-    font-size: 1.75em;
-    color: orange;
-}
-
-p {
-    font-size: 1.25em;
-    color: orange;
 }
   
 .background-container{
@@ -43,7 +18,6 @@ p {
     left:0;
     bottom: 0;
     right: 0;
-    overflow: hidden;
 }
 
 .stars {
@@ -55,7 +29,6 @@ p {
     right: 0;
     display: block;
     z-index: -10;
-    overflow: hidden;
 }
 
 .twinkling{
@@ -68,7 +41,6 @@ p {
     top: 0;
     bottom: 0;
     z-index: -8;
-    overflow: hidden;
     
     -moz-animation: move-background 30s linear infinite;
     -ms-animation: move-background 30s linear infinite;
@@ -104,15 +76,6 @@ p {
 }
 
 @-moz-keyframes move-background {    
-    from {
-        -webkit-transform: translate3d(0px, 0px, 0px);
-    }
-    to { 
-        -webkit-transform: translate3d(1000px, 0px, 0px);
-    }
-}
-
-@-webkit-keyframes move-background {
     from {
         -webkit-transform: translate3d(0px, 0px, 0px);
     }
