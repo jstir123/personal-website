@@ -18,14 +18,13 @@ const useStyles = createUseStyles({
     },
     content: {
         minHeight: '100%',
-        width: '65%',
-        maxWidth: 1700,
         margin: 'auto',
         paddingTop: 70,
-        paddingRight: '5%',
-        paddingLeft: '5%',
-        background: 'rgb(0,0,0)',
-        background: 'linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(17,17,17,1) 5%, rgba(17,17,17,1) 95%, rgba(0,0,0,0) 100%)'
+        // paddingRight: '5%',
+        // paddingLeft: '5%',
+        background: 'transparent'
+        // background: 'rgb(0,0,0)',
+        // background: 'linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(17,17,17,1) 5%, rgba(17,17,17,1) 95%, rgba(0,0,0,0) 100%)'
     }
 })
 

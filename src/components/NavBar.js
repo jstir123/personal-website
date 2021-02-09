@@ -7,12 +7,17 @@ const useStyles = createUseStyles({
         display: 'flex',
         height: '100%',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        borderBottom: '2px solid orange',
+        backgroundColor: '#111'
     },
     navLink: {
         margin: '1.5em',
-        fontSize: '1.3em',
+        fontSize: '2em',
         fontWeight: 'bold',
+        color: '#000',
+        WebkitTextStroke: ' .01pt orange',
+        transition: '.5s',
         '&:hover': {
             transform: 'scale(1.1)',
             // textDecoration: 'underline'
@@ -34,7 +39,7 @@ const NavBar = () => {
                 <NavLink 
                     exact to={link.path}
                     className={classes.navLink}
-                    activeStyle={{textDecoration: 'underline', transform: 'scale(1.1)'}}
+                    activeStyle={{textDecoration: 'underline'}}
                 >
                     {link.name}
                 </NavLink>
