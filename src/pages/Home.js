@@ -1,15 +1,21 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
-import ProfileBody from '../components/ProfileBody';
 
-import ProfileHeader from '../components/ProfileHeader';
+import Intro from '../components/Intro';
+import ProfilePic from '../components/ProfilePic';
 
 const useStyles = createUseStyles({
     home: {
+        maxWidth: '1525px',
         margin: 'auto'
     },
-    h1: {
-        margin: 0
+    container: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        margin: '0 0',
+        marginTop: '40px',
+        padding: '5em 7em'
     }
 })
 
@@ -18,8 +24,10 @@ const Home = () => {
 
     return (
         <div className={classes.home}>
-            <ProfileHeader />
-            <ProfileBody />
+            <div className={classes.container + ' ' + classes.purpleMist}>
+                <Intro />
+                <ProfilePic />
+            </div>
         </div>
     );
 }
