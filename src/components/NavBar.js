@@ -82,6 +82,7 @@ const NavBar = () => {
                         exact to={link.path}
                         className={classes.navLink}
                         activeStyle={activeStyle}
+                        key={link.name}
                     >
                         {link.name}
                     </NavLink>

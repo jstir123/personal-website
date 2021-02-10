@@ -3,6 +3,7 @@ import { createUseStyles } from 'react-jss';
 
 import Intro from '../components/Intro';
 import ProfilePic from '../components/ProfilePic';
+import TrippitCard from '../components/TrippitCard';
 
 const useStyles = createUseStyles({
     home: {
@@ -24,9 +25,12 @@ const Home = () => {
 
     return (
         <div className={classes.home}>
-            <div className={classes.container + ' ' + classes.purpleMist}>
+            <div className={classes.container}>
                 <Intro />
                 <ProfilePic />
+            </div>
+            <div className={classes.container}>
+                <TrippitCard />
             </div>
         </div>
     );
