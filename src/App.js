@@ -32,6 +32,7 @@ const App = () => {
                 <div className='background-container'></div>
                 <div className='stars'></div>
                 <div className='twinkling'></div>
+                <div className="purple-bar"></div>
 
                 <div className={classes.navbar}>
                     <NavBar />

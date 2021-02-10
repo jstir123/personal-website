@@ -12,7 +12,7 @@ a {
     text-decoration: none;
 }
   
-.background-container{
+.background-container {
     position: fixed;
     top: 0;
     left:0;
@@ -31,7 +31,7 @@ a {
     z-index: -10;
 }
 
-.twinkling{
+.twinkling {
     width: 10000px;
     height: 100%;
     background: transparent url(./images/twinkling.png) repeat;
@@ -48,6 +48,18 @@ a {
     -webkit-animation: move-background 30s linear infinite;
     animation: move-background 30s linear infinite;
     
+}
+
+.purple-bar {
+    position: absolute;
+    top: 150px;
+    left: -100px;
+    right: -100px;
+    background: purple;
+    opacity: 0.15;
+    filter: blur(100px);
+    height: 35%;
+    z-index: -6;
 }
 
 .about-me-container {

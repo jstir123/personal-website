@@ -6,12 +6,12 @@ const useStyles = createUseStyles({
     profilePic: {
         height: '100%',
         width: '100%',
-        borderRadius: 150,
-        overflow: 'hidden'
+        textAlign: 'center'
     },
     image: {
-        height: '100%',
-        width: 'auto'
+        height: '325px',
+        width: '325px',
+        borderRadius: '100%'
     }
 })
 
