@@ -13,7 +13,8 @@ const TrippitCard = () => {
         card: {
             position: 'relative',
             height: 'auto',
-            width: '60%'
+            width: '100%',
+            maxWidth: '700px'
         },
         image: {
             position: 'absolute',
@@ -25,13 +26,15 @@ const TrippitCard = () => {
     };
 
     return (
-        <Card
-            image={TrippitExample}
-            title={title}
-            body={body}
-            links={links}
-            styles={styles}
-        />
+        <div style={{zIndex: '-1'}}>
+            <Card
+                image={TrippitExample}
+                title={title}
+                body={body}
+                links={links}
+                styles={styles}
+            />
+        </div>
     );
 }
 

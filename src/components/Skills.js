@@ -9,7 +9,7 @@ const useStyles = createUseStyles({
     skills: {
         width: '40%',
         textAlign: 'center',
-        marginTop: '8em',
+        marginTop: '4em',
         minWidth: '450px'
     },
     logos: {
@@ -24,18 +24,17 @@ const useStyles = createUseStyles({
         },
         '& h4': {
             fontSize: '20x',
-            margin: '1em 0'
+            margin: '1em 0',
+            fontWeight: 'lighter'
         }
     },
     skill: {
-        width: '17%'
+        width: '30%'
     },
     image: {
-        width: '100%'
-    },
-    '@media (max-width: 1269px)': {
-        skill: {
-            width: '30%'
+        width: '100%',
+        '&:hover': {
+            animation: 'spin .5s ease-in-out'
         }
     },
     '@media (max-width: 525px)': {

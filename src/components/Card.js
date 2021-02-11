@@ -11,7 +11,7 @@ const useStyles = createUseStyles({
         overflow: 'hidden',
         boxSizing: 'border-box',
         minWidth: '360px',
-        marginTop: '8em'
+        marginTop: '4em'
     },
     imageContainer: {
         width: '40%'

@@ -5,7 +5,7 @@ const useStyles = createUseStyles({
     intro: {
         height: '100%',
         width: '60%',
-        marginTop: '8em',
+        marginTop: '3em',
         minWidth: '460px',
         '& h1': {
             color: '#fff',

@@ -6,6 +6,7 @@ html, body, #root {
     overflow: hidden;
     color: #fff;
     font-family: 'Roboto', sans-serif;
+    overflow: hidden;
 }
 
 a {
@@ -13,12 +14,13 @@ a {
 }
   
 .background-container {
-    position: fixed;
+    position: absolute;
     top: 0;
     left:0;
     bottom: 0;
     right: 0;
     z-index: -12;
+    overflow: hidden;
 }
 
 .stars {
@@ -30,6 +32,7 @@ a {
     right: 0;
     display: block;
     z-index: -10;
+    overflow: hidden;
 }
 
 .twinkling {
@@ -41,6 +44,7 @@ a {
     right: 0;
     top: 0;
     bottom: 0;
+    overflow: hidden;
     z-index: -8;
     
     -moz-animation: move-background 30s linear infinite;
@@ -53,13 +57,14 @@ a {
 
 .purple-bar {
     position: absolute;
-    top: 150px;
+    top: 125px;
     left: -100px;
     right: -100px;
     background: purple;
     opacity: 0.15;
     filter: blur(100px);
     height: 35%;
+    max-height: 400px;
     z-index: -6;
 }
 
@@ -112,5 +117,14 @@ a {
     }
     to {
       text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px purple, 0 0 40px purple, 0 0 50px purple, 0 0 60px purple, 0 0 70px purple;
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(360deg);
     }
 }

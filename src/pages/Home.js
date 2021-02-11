@@ -10,7 +10,7 @@ const useStyles = createUseStyles({
     home: {
         height: '100%',
         margin: 'auto',
-        maxWidth: '1400px',
+        maxWidth: '1275px',
         boxSizing: 'border-box'
     },
     container: {

@@ -7,7 +7,7 @@ const useStyles = createUseStyles({
         height: '100%',
         width: '40%',
         minWidth: '325px',
-        marginTop: '8em'
+        marginTop: '3em'
     },
     frame: {
         height: '325px',
@@ -24,8 +24,7 @@ const useStyles = createUseStyles({
     '@media (max-width: 525px)': {
         profilePic: {
             width: '90%',
-            minWidth: '250px',
-            marginTop: '3em'
+            minWidth: '250px'
         },
         frame: {
             height: '250px',
