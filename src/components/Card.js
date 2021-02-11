@@ -7,19 +7,24 @@ const useStyles = createUseStyles({
         justifyContent: 'center',
         border: '2px solid #fff',
         width: '400px',
-        borderRadius: '5px',
-        overflow: 'hidden'
+        borderRadius: '10px',
+        overflow: 'hidden',
+        boxSizing: 'border-box',
+        minWidth: '360px',
+        marginTop: '8em'
     },
     imageContainer: {
         width: '40%'
     },
     image: {
-        margin: '0'
+        // margin: '0'
     },
     content: {
         width: '60%',
         textAlign: 'center',
-        padding: '2em',
+        padding: '1.5em',
+        minWidth: '350px',
+        boxSizing: 'border-box',
         '& h3': {
             margin: '0',
             marginBottom: '15px',
@@ -38,7 +43,7 @@ const useStyles = createUseStyles({
             borderRadius: '25px',
             height: '40px',
             width: '115px',
-            margin: '2em 7px 0px 7px',
+            margin: '1.5em 7px 0px 7px',
             fontSize: '1.1em',
             cursor: 'pointer',
             transition: '.1s',
@@ -47,6 +52,22 @@ const useStyles = createUseStyles({
                 animation: 'glow .03s ease-in-out infinite alternate',
                 transform: 'scale(1.02) translateY(-1px)'
             }
+        }
+    },
+    '@media (max-width: 1200px)': {
+        content: {
+            width: '100%',
+        },
+        imageContainer: {
+            visibility: 'hidden',
+            width: '0',
+            height: '0'
+        }
+    },
+    '@media (max-width: 525px)': {
+        card: {
+            minWidth: '325px',
+            marginTop: '3em'
         }
     }
 })

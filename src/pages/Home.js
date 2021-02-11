@@ -4,19 +4,22 @@ import { createUseStyles } from 'react-jss';
 import Intro from '../components/Intro';
 import ProfilePic from '../components/ProfilePic';
 import TrippitCard from '../components/TrippitCard';
+import Skills from '../components/Skills';
 
 const useStyles = createUseStyles({
     home: {
-        maxWidth: '1525px',
-        margin: 'auto'
+        height: '100%',
+        margin: 'auto',
+        maxWidth: '1400px',
+        boxSizing: 'border-box'
     },
     container: {
         display: 'flex',
+        flexWrap: 'wrap',
         justifyContent: 'center',
         alignItems: 'center',
-        margin: '0 0',
-        marginTop: '40px',
-        padding: '5em 7em'
+        margin: '0 4em',
+        boxSizing: 'border-box'
     }
 })
 
@@ -31,6 +34,7 @@ const Home = () => {
             </div>
             <div className={classes.container}>
                 <TrippitCard />
+                <Skills />
             </div>
         </div>
     );

@@ -4,7 +4,9 @@ import { createUseStyles } from 'react-jss';
 const useStyles = createUseStyles({
     intro: {
         height: '100%',
-        width: '100%',
+        width: '60%',
+        marginTop: '8em',
+        minWidth: '460px',
         '& h1': {
             color: '#fff',
             fontSize: '72px',
@@ -13,11 +15,23 @@ const useStyles = createUseStyles({
         '& h3': {
             color: '#fff',
             fontSize: '48px',
-            margin: '0 0 0 0',
-            width: '750px'
+            margin: '0 0 0 0'
         },
         '& span': {
             color: 'orange'
+        }
+    },
+    '@media (max-width: 525px)': {
+        intro: {
+            marginTop: '2em',
+            width: '100%',
+            minWidth: '0px',
+            '& h1': {
+                fontSize: '48px'
+            },
+            '& h3': {
+                fontSize: '32px'
+            }
         }
     }
 })

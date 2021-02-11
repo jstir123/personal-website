@@ -11,12 +11,15 @@ const TrippitCard = () => {
     ];
     const styles = {
         card: {
-            height: '355px',
-            width: '725px'
+            position: 'relative',
+            height: 'auto',
+            width: '60%'
         },
         image: {
-            width: '95%',
-            padding: '30px 0 0 25px',
+            position: 'absolute',
+            bottom: '-30%',
+            left: '7%',
+            height: '120%',
             transform: 'rotate(-15deg)'
         }
     };
