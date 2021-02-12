@@ -9,7 +9,7 @@ const useStyles = createUseStyles({
     skills: {
         width: '40%',
         textAlign: 'center',
-        marginTop: '4em',
+        margin: '5vh 0',
         minWidth: '450px'
     },
     logos: {
@@ -18,14 +18,11 @@ const useStyles = createUseStyles({
         justifyContent: 'center',
         alignItems: 'center',
         margin: '2em 0',
-        // minWidth: '450px',
         '& div': {
             margin: '1em'
         },
-        '& h4': {
-            fontSize: '20x',
-            margin: '1em 0',
-            fontWeight: 'lighter'
+        '& p': {
+            margin: '1em 0'
         }
     },
     skill: {
@@ -56,12 +53,12 @@ const Skills = () => {
 
     return (
         <div className={classes.skills}>
-            <h1>Skills</h1>
+            <h3>Skills</h3>
             <div className={classes.logos}>
                 {skills.map(skill => (
                     <div className={classes.skill} key={skill.name}>
                         <img className={classes.image} src={skill.image} alt=""/>
-                        <h4>{skill.name}</h4>
+                        <p>{skill.name}</p>
                     </div>
                 ))}
             </div>

@@ -1,12 +1,38 @@
 html, body, #root {
-    min-height: 100%;
-    height: 100%;
+    min-height: 100vh;
+    height: 100vh;
     margin: 0;
     padding: 0;
     overflow: hidden;
     color: #fff;
+    font-size: calc(16px);
     font-family: 'Roboto', sans-serif;
-    overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    color: #fff;
+    margin: 0;
+}
+
+h1 {
+    font-size: 4.5em;
+}
+
+h2 {
+    font-size: 3.75em;
+}
+
+h3 {
+    font-size: 3em;
+}
+
+h4 {
+    font-size: 2.25em;
+}
+
+p {
+    font-size: calc(1.25em);
+    font-weight: lighter;
 }
 
 a {
@@ -20,7 +46,6 @@ a {
     bottom: 0;
     right: 0;
     z-index: -12;
-    overflow: hidden;
 }
 
 .stars {
@@ -32,7 +57,6 @@ a {
     right: 0;
     display: block;
     z-index: -10;
-    overflow: hidden;
 }
 
 .twinkling {
@@ -44,7 +68,6 @@ a {
     right: 0;
     top: 0;
     bottom: 0;
-    overflow: hidden;
     z-index: -8;
     
     -moz-animation: move-background 30s linear infinite;
@@ -61,10 +84,11 @@ a {
     left: -100px;
     right: -100px;
     background: purple;
-    opacity: 0.15;
-    filter: blur(100px);
+    opacity: 0.25;
+    filter: blur(75px);
     height: 35%;
     max-height: 400px;
+    animation: fade 7s linear infinite, blur 9s linear infinite;
     z-index: -6;
 }
 
@@ -74,6 +98,20 @@ a {
     text-align: center;
     animation: enter-about-me 30s linear infinite;
     transform-origin: 50% 100%;
+}
+
+@media (max-width: 525px) {
+    h1 {
+        font-size: 3em;
+    }
+
+    h2 {
+        font-size: 2.5em;
+    }
+
+    h3 {
+        font-size: 2em;
+    }
 }
 
 @keyframes move-background {
@@ -117,6 +155,30 @@ a {
     }
     to {
       text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px purple, 0 0 40px purple, 0 0 50px purple, 0 0 60px purple, 0 0 70px purple;
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: .18;
+    }
+    50% {
+        opacity : .23;
+    }
+    100% {
+        opacity: .18;
+    }
+}
+
+@keyframes blur {
+    0% {
+        filter: blur(100px);
+    }
+    50% {
+        filter : blur(150px);
+    }
+    100% {
+        filter: blur(100px);
     }
 }
 

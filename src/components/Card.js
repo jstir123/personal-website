@@ -6,33 +6,27 @@ const useStyles = createUseStyles({
         display: 'flex',
         justifyContent: 'center',
         border: '2px solid #fff',
-        width: '400px',
+        width: '350px',
         borderRadius: '10px',
         overflow: 'hidden',
         boxSizing: 'border-box',
         minWidth: '360px',
-        marginTop: '4em'
+        margin: '5vh 0'
     },
     imageContainer: {
         width: '40%'
     },
     image: {
-        // margin: '0'
+    
     },
     content: {
         width: '60%',
         textAlign: 'center',
         padding: '1.5em',
-        minWidth: '350px',
+        minWidth: '300px',
         boxSizing: 'border-box',
         '& h3': {
-            margin: '0',
-            marginBottom: '15px',
-            fontSize: '44px'
-        },
-        '& p': {
-            fontSize: '20px',
-            margin: '0'
+            marginBottom: '15px'
         }
     },
     links: {
@@ -46,11 +40,11 @@ const useStyles = createUseStyles({
             margin: '1.5em 7px 0px 7px',
             fontSize: '1.1em',
             cursor: 'pointer',
-            transition: '.1s',
+            transition: '.0s',
             '&:hover': {
                 color: '#fff',
                 animation: 'glow .03s ease-in-out infinite alternate',
-                transform: 'scale(1.02) translateY(-1px)'
+                border: '3px solid orange'
             }
         }
     },
@@ -59,9 +53,7 @@ const useStyles = createUseStyles({
             width: '100%',
         },
         imageContainer: {
-            visibility: 'hidden',
-            width: '0',
-            height: '0'
+            display: 'none'
         }
     },
     '@media (max-width: 525px)': {
@@ -89,7 +81,7 @@ const Card = ({ image, title, body, links, styles }) => {
                 </p>
                 <div className={classes.links}>
                     {links.map(link => (
-                        <a href={link.path} key={link.name}>
+                        <a href={link.path} target='_blank' rel='noopener noreferrer' key={link.name}>
                             <button>
                                 {link.name}
                             </button>

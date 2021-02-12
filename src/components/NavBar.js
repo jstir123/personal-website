@@ -1,12 +1,14 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { createUseStyles } from 'react-jss';
+import Dropdown from './Dropdown';
 import GithubLogo from '../images/github-logo.png';
 import LinkedInLogo from '../images/linkedin-logo.png';
 import MenuIcon from '../images/menu-icon.png';
 
 const useStyles = createUseStyles({
     navBar: {
+        position: 'relative',
         display: 'flex',
         height: '100%',
         width: '100%',
@@ -15,6 +17,7 @@ const useStyles = createUseStyles({
         justifyContent: 'space-between',
         alignItems: 'center',
         background: 'rgba(0, 0, 0, 1)'
+        // backdropFilter: 'blur(50px)'
     },
     container: {
         display: 'flex',
@@ -39,9 +42,10 @@ const useStyles = createUseStyles({
         }
     },
     navIcon: {
-        height: '50%',
+        height: '30px',
         background: '#fff',
-        borderRadius: 5,
+        border: '2px solid white',
+        borderRadius: 25,
         margin: 5
     },
     menu: {
@@ -50,6 +54,13 @@ const useStyles = createUseStyles({
     menuIcon: {
         height: '60%',
         cursor: 'pointer'
+    },
+    dropdown: {
+        position: 'absolute',
+        top: '70px',
+        left: '0',
+        width: '100%'
+
     },
     largeNav: {
 
@@ -87,7 +98,6 @@ const NavBar = () => {
         {'name': 'Projects', 'path': '/projects'}
     ];
     const activeStyle = {
-        // textShadow: '0 0 5px #fff, 0 0 5px #fff, 0 0 5px orange, 0 0 5px orange, 0 0 5px orange, 0 0 5px orange, 0 0 5px orange',
         transform: 'scale(1.5)',
         animation: 'glow .03s ease-in-out infinite alternate'
     };
@@ -97,8 +107,12 @@ const NavBar = () => {
         <div className={classes.navBar}>
             <div className={classes.container + ' ' + classes.justifyEnd + ' ' + classes.largeNav}>
                 <span className={classes.email}>jstir123@gmail.com</span>
-                <img className={classes.navIcon} src={GithubLogo} alt=""/>
-                <img className={classes.navIcon} src={LinkedInLogo} alt=""/>
+                <a href='https://www.github.com/jstir123' target='_blank' rel='noopener noreferrer'>
+                    <img className={classes.navIcon} src={GithubLogo} alt=""/>
+                </a>
+                <a href='https://www.trippit.co' target='_blank' rel='noopener noreferrer'>
+                    <img className={classes.navIcon} src={LinkedInLogo} alt=""/>
+                </a>
             </div>
             <div className={classes.container + ' ' + classes.justifyStart + ' ' + classes.largeNav}>
             {links.map(link => (
@@ -114,6 +128,9 @@ const NavBar = () => {
             </div>
             <div className={classes.container + ' ' + classes.justifyStart + ' ' + classes.menu}>
                 <img className={classes.menuIcon} src={MenuIcon} alt=""/>
+            </div>
+            <div className={classes.dropdown}>
+                <Dropdown />
             </div>
         </div>
         <div className={classes.divider}></div>
