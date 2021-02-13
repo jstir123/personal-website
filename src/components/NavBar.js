@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { createUseStyles } from 'react-jss';
+import Dropdown from './Dropdown';
 import GithubLogo from '../images/github-logo.png';
 import LinkedInLogo from '../images/linkedin-logo.png';
 import MenuIcon from '../images/menu-icon.png';
+import CloseIcon from '../images/close-icon.png';
 
 const useStyles = createUseStyles({
     navBar: {
+        position: 'relative',
         display: 'flex',
         height: '100%',
         width: '100%',
@@ -39,20 +42,27 @@ const useStyles = createUseStyles({
         }
     },
     navIcon: {
-        height: '50%',
+        height: '30px',
         background: '#fff',
-        borderRadius: 5,
+        border: '2px solid white',
+        borderRadius: 25,
         margin: 5
     },
     menu: {
-
     },
     menuIcon: {
         height: '60%',
         cursor: 'pointer'
     },
+    dropdown: {
+        position: 'absolute',
+        top: '70px',
+        left: '0',
+        width: '100%',
+        height: 'calc(100vh - 70px)',
+        overflow: 'hidden'
+    },
     largeNav: {
-
     },
     email: {
         marginRight: '1em',
@@ -74,31 +84,47 @@ const useStyles = createUseStyles({
     '@media (min-width: 851px)': {
         menu: {
             display: 'none'
+        },
+        dropdown: {
+            display: 'none'
         }
     }
 })
 
 const NavBar = () => {
     const classes = useStyles();
+    const [menuOpen, setMenuOpen] = useState(false);
+
     const links = [
         {'name': 'Home', 'path': '/'},
         {'name': 'About', 'path': '/about'},
         {'name': 'Resume', 'path': '/resume'},
         {'name': 'Projects', 'path': '/projects'}
     ];
+    const socials = [
+        {'logo': GithubLogo, 'path': 'https://www.github.com/jstir123'},
+        {'logo': LinkedInLogo, 'path': 'https://www.linkedin.com/in/john-stirling-a22432129/'}
+    ];
+    const email = 'jstir123@gmail.com';
     const activeStyle = {
-        // textShadow: '0 0 5px #fff, 0 0 5px #fff, 0 0 5px orange, 0 0 5px orange, 0 0 5px orange, 0 0 5px orange, 0 0 5px orange',
         transform: 'scale(1.5)',
         animation: 'glow .03s ease-in-out infinite alternate'
+    };
+
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen)
     };
 
     return (
         <>
         <div className={classes.navBar}>
             <div className={classes.container + ' ' + classes.justifyEnd + ' ' + classes.largeNav}>
-                <span className={classes.email}>jstir123@gmail.com</span>
-                <img className={classes.navIcon} src={GithubLogo} alt=""/>
-                <img className={classes.navIcon} src={LinkedInLogo} alt=""/>
+                <span className={classes.email}>{email}</span>
+                {socials.map(social => (
+                    <a href={social.path} target='_blank' rel='noopener noreferrer'>
+                        <img className={classes.navIcon} src={social.logo} alt=""/>
+                    </a>
+                ))}
             </div>
             <div className={classes.container + ' ' + classes.justifyStart + ' ' + classes.largeNav}>
             {links.map(link => (
@@ -113,7 +139,34 @@ const NavBar = () => {
                 ))}
             </div>
             <div className={classes.container + ' ' + classes.justifyStart + ' ' + classes.menu}>
-                <img className={classes.menuIcon} src={MenuIcon} alt=""/>
+                <img
+                    className={classes.menuIcon}
+                    onClick={() => toggleMenu()}
+                    src={MenuIcon}
+                    alt=""
+                    style={{
+                        display: menuOpen ? 'none' : 'block'
+                    }}
+                />
+                <img
+                    className={classes.menuIcon}
+                    onClick={() => toggleMenu()}
+                    src={CloseIcon}
+                    alt=""
+                    style={{
+                        display: menuOpen ? 'block' : 'none'
+                    }}
+                />
+            </div>
+            <div 
+                className={classes.dropdown}
+                onClick={() => toggleMenu()}
+                style={{
+                    visibility: menuOpen ? 'visible' : 'hidden',
+                    animation: menuOpen ? 'growDown 300ms ease-in-out forwards' : ''
+                }}
+            >
+                <Dropdown links={links} socials={socials} email={email} />
             </div>
         </div>
         <div className={classes.divider}></div>

@@ -5,33 +5,16 @@ const useStyles = createUseStyles({
     intro: {
         height: '100%',
         width: '60%',
-        marginTop: '3em',
+        margin: '5vh 0',
         minWidth: '460px',
-        '& h1': {
-            color: '#fff',
-            fontSize: '72px',
-            margin: '0 0 0 0'
-        },
-        '& h3': {
-            color: '#fff',
-            fontSize: '48px',
-            margin: '0 0 0 0'
-        },
         '& span': {
             color: 'orange'
         }
     },
     '@media (max-width: 525px)': {
         intro: {
-            marginTop: '2em',
             width: '100%',
-            minWidth: '0px',
-            '& h1': {
-                fontSize: '48px'
-            },
-            '& h3': {
-                fontSize: '32px'
-            }
+            minWidth: '290px'
         }
     }
 })

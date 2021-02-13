@@ -1,12 +1,43 @@
 html, body, #root {
-    min-height: 100%;
-    height: 100%;
+    min-height: 100vh;
+    height: 100vh;
     margin: 0;
     padding: 0;
     overflow: hidden;
     color: #fff;
+    font-size: calc(16px);
     font-family: 'Roboto', sans-serif;
-    overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    color: #fff;
+    margin: 0;
+}
+
+h1 {
+    font-size: 4.5em;
+}
+
+h2 {
+    font-size: 3.75em;
+}
+
+h3 {
+    font-size: 3em;
+}
+
+h4 {
+    font-size: 2.25em;
+}
+
+h6 {
+    font-size: 1.5em;
+    font-weight: normal;
+}
+
+p {
+    font-size: calc(1.25em);
+    font-weight: lighter;
 }
 
 a {
@@ -20,7 +51,6 @@ a {
     bottom: 0;
     right: 0;
     z-index: -12;
-    overflow: hidden;
 }
 
 .stars {
@@ -32,7 +62,6 @@ a {
     right: 0;
     display: block;
     z-index: -10;
-    overflow: hidden;
 }
 
 .twinkling {
@@ -44,7 +73,6 @@ a {
     right: 0;
     top: 0;
     bottom: 0;
-    overflow: hidden;
     z-index: -8;
     
     -moz-animation: move-background 30s linear infinite;
@@ -61,10 +89,11 @@ a {
     left: -100px;
     right: -100px;
     background: purple;
-    opacity: 0.15;
+    opacity: 0.25;
     filter: blur(100px);
     height: 35%;
     max-height: 400px;
+    /* animation: fade 7s linear infinite, blur 9s linear infinite; */
     z-index: -6;
 }
 
@@ -76,6 +105,20 @@ a {
     transform-origin: 50% 100%;
 }
 
+@media (max-width: 525px) {
+    h1 {
+        font-size: 3em;
+    }
+
+    h2 {
+        font-size: 2.5em;
+    }
+
+    h3 {
+        font-size: 2em;
+    }
+}
+
 @keyframes move-background {
     from {
         -webkit-transform: translate3d(0px, 0px, 0px);
@@ -84,6 +127,7 @@ a {
         -webkit-transform: translate3d(1000px, 0px, 0px);
     }
 }
+
 @-webkit-keyframes move-background {
     from {
         -webkit-transform: translate3d(0px, 0px, 0px);
@@ -119,6 +163,89 @@ a {
       text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px purple, 0 0 40px purple, 0 0 50px purple, 0 0 60px purple, 0 0 70px purple;
     }
 }
+@keyframes glow {
+    from {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px purple, 0 0 20px purple, 0 0 25px purple, 0 0 30px purple, 0 0 35px purple;
+    }
+    to {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px purple, 0 0 40px purple, 0 0 50px purple, 0 0 60px purple, 0 0 70px purple;
+    }
+}
+
+@-webkit-keyframes glow {
+    from {
+        -webkit-text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px purple, 0 0 20px purple, 0 0 25px purple, 0 0 30px purple, 0 0 35px purple;
+    }
+    to {
+        -webkit-text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px purple, 0 0 40px purple, 0 0 50px purple, 0 0 60px purple, 0 0 70px purple;
+    }
+}
+
+@keyframes box-glow {
+    from {
+      box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px purple, 0 0 20px purple, 0 0 25px purple, 0 0 30px purple, 0 0 35px purple;
+    }
+    to {
+      box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px purple, 0 0 40px purple, 0 0 50px purple, 0 0 60px purple, 0 0 70px purple;
+    }
+}
+
+@-webkit-keyframes box-glow {
+    from {
+        -webkit-box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px purple, 0 0 20px purple, 0 0 25px purple, 0 0 30px purple, 0 0 35px purple;
+    }
+    to {
+        -webkit-box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px purple, 0 0 40px purple, 0 0 50px purple, 0 0 60px purple, 0 0 70px purple;
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: .18;
+    }
+    50% {
+        opacity : .23;
+    }
+    100% {
+        opacity: .18;
+    }
+}
+
+@-webkit-keyframes fade {
+    0% {
+        -webkit-opacity: .18;
+    }
+    50% {
+        -webkit-opacity : .23;
+    }
+    100% {
+        -webkit-opacity: .18;
+    }
+}
+
+@keyframes blur {
+    0% {
+        filter: blur(100px);
+    }
+    50% {
+        filter : blur(150px);
+    }
+    100% {
+        filter: blur(100px);
+    }
+}
+
+@-webkit-keyframes blur {
+    0% {
+        -webkit-filter: blur(100px);
+    }
+    50% {
+        -webkit-filter : blur(150px);
+    }
+    100% {
+        -webkit-filter: blur(100px);
+    }
+}
 
 @keyframes spin {
     from {
@@ -126,5 +253,56 @@ a {
     }
     to {
         transform: rotateZ(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    from {
+        -webkit-transform: rotateZ(0deg);
+    }
+    to {
+        -webkit-transform: rotateZ(360deg);
+    }
+}
+
+@keyframes rotateX {
+    0% {
+        transform: rotateX(-90deg);
+    }
+    50% {
+        transform: rotateX(-20deg);
+    }
+    100% {
+        transform: rotateX(0deg);
+    }
+}
+
+@-webkit-keyframes rotateX {
+    0% {
+        -webkit-transform: rotateX(-90deg);
+    }
+    50% {
+        -webkit-transform: rotateX(-20deg);
+    }
+    100% {
+        -webkit-transform: rotateX(0deg);
+    }
+}
+
+@keyframes growDown {
+    0% {
+      height: 0;
+    }
+    100% {
+        height: calc(100vh - 70px);
+    }
+}
+
+@-webkit-keyframes growDown {
+    0% {
+        -webkit-height: 0;
+    }
+    100% {
+        -webkit-height: calc(100vh - 70px);
     }
 }

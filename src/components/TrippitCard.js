@@ -6,8 +6,8 @@ const TrippitCard = () => {
     const title = 'Trippit.co';
     const body = 'Trippit makes it easy to remember all of your favorite adventures! Keep track of what hotel you stayed at, where you ate, and what you enjoyed most. Best of all you can share your trips with friends in order to plan the next perfect getaway!';
     const links = [
-        {name: 'Website', path: 'www.trippit.co'},
-        {name: 'GitHub', path: 'www.github.com'}
+        {name: 'Website', path: 'https://www.trippit.co'},
+        {name: 'GitHub', path: 'https://www.github.com/jstir123'}
     ];
     const styles = {
         card: {
@@ -26,7 +26,7 @@ const TrippitCard = () => {
     };
 
     return (
-        <div style={{zIndex: '-1'}}>
+        <div>
             <Card
                 image={TrippitExample}
                 title={title}

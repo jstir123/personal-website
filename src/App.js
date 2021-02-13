@@ -8,18 +8,22 @@ import NavBar from './components/NavBar';
 const useStyles = createUseStyles({
     app: {
         height: '100%',
-        overflowY: 'scroll'
+        // overflowY: 'scroll'
     },
     navbar: {
         position: 'fixed',
         top: 0,
         height: 70,
         width: '100%',
-        background: 'transparent'
+        background: 'transparent',
+        zIndex: 4
     },
     content: {
+        height: '100%',
         paddingTop: 70,
-        background: 'transparent'
+        background: 'transparent',
+        zIndex: 2,
+        overflow: 'auto'
     }
 })
 

@@ -1,13 +1,13 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
-import ProfPic from '../images/Prof-Pic-1.jpg';
+import ProfPic from '../images/Prof-Pic-1.gif';
 
 const useStyles = createUseStyles({
     profilePic: {
         height: '100%',
         width: '40%',
         minWidth: '325px',
-        marginTop: '3em'
+        margin: '5vh 0'
     },
     frame: {
         height: '325px',
