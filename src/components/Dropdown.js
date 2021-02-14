@@ -40,14 +40,16 @@ const useStyles = createUseStyles({
         background: '#fff',
         margin: 'auto',
         maxWidth: '2000px',
-        animation: 'box-glow .02s ease-in-out infinite alternate'
+        boxShadow: '0 0 5px #fff, 0 0 10px #fff, 0 0 15px purple, 0 0 20px purple, 0 0 25px purple, 0 0 30px purple, 0 0 35px purple',
+        // animation: 'box-glow .02s ease-in-out infinite alternate'
     }
 })
 
 const Dropdown = ({ links, socials, email }) => {
     const classes = useStyles();
     const activeStyle = {
-        animation: 'glow .03s ease-in-out infinite alternate'
+        textShadow: '0 0 10px #fff, 0 0 20px #fff, 0 0 30px purple, 0 0 40px purple, 0 0 50px purple, 0 0 60px purple, 0 0 70px purple'
+        // animation: 'glow .03s ease-in-out infinite alternate'
     };
 
     return (
@@ -68,7 +70,7 @@ const Dropdown = ({ links, socials, email }) => {
             ))}
             <li className={classes.item + ' ' + classes.justifyCenter}>
                 {socials.map(social => (
-                    <a href={social.path} target='_blank' rel='noopener noreferrer'>
+                    <a href={social.path} target='_blank' rel='noopener noreferrer' key={social.path}>
                         <img className={classes.navIcon} src={social.logo} alt=""/>
                     </a>
                 ))}

@@ -31,7 +31,7 @@ const useStyles = createUseStyles({
     image: {
         width: '100%',
         '&:hover': {
-            animation: 'spin .5s ease-in-out'
+            animation: 'spin .75s ease-in-out'
         }
     },
     '@media (max-width: 525px)': {

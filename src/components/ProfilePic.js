@@ -1,6 +1,6 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
-import ProfPic from '../images/Prof-Pic-1.gif';
+import ProfPic from '../images/Prof-Pic-1.JPG';
 
 const useStyles = createUseStyles({
     profilePic: {
