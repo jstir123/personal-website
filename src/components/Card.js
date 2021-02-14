@@ -32,7 +32,7 @@ const useStyles = createUseStyles({
     links: {
         '& button': {
             color: 'orange',
-            background: 'transparent',
+            background: '#000',
             border: '2px solid orange',
             borderRadius: '25px',
             height: '40px',
@@ -40,12 +40,13 @@ const useStyles = createUseStyles({
             margin: '1.5em 7px 0px 7px',
             fontSize: '1.1em',
             cursor: 'pointer',
-            transition: '.0s',
+            transition: '0',
             '&:hover': {
                 color: '#fff',
                 textShadow: '0 0 10px #fff, 0 0 20px #fff, 0 0 30px purple, 0 0 40px purple, 0 0 50px purple, 0 0 60px purple, 0 0 70px purple',
                 // animation: 'glow .03s ease-in-out infinite alternate',
-                border: '3px solid orange'
+                // border: '3px solid orange'
+                transform: 'scale(1.03)'
             }
         }
     },

@@ -104,7 +104,7 @@ const NavBar = () => {
     ];
     const socials = [
         {'logo': GithubLogo, 'path': 'https://www.github.com/jstir123'},
-        {'logo': LinkedInLogo, 'path': 'https://www.linkedin.com/in/john-stirling-a22432129/'}
+        {'logo': LinkedInLogo, 'path': 'https://www.linkedin.com/in/jt-stirling/'}
     ];
     const email = 'jstir123@gmail.com';
     const activeStyle = {

@@ -160,7 +160,7 @@ a {
     }
 }
 
-@keyframes glow {
+/* @keyframes glow {
     from {
       text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px purple, 0 0 20px purple, 0 0 25px purple, 0 0 30px purple, 0 0 35px purple;
     }
@@ -176,9 +176,9 @@ a {
     to {
         -webkit-text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px purple, 0 0 40px purple, 0 0 50px purple, 0 0 60px purple, 0 0 70px purple;
     }
-} */
+}
 
-/* @keyframes box-glow {
+@keyframes box-glow {
     from {
       box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px purple, 0 0 20px purple, 0 0 25px purple, 0 0 30px purple, 0 0 35px purple;
     }
@@ -194,9 +194,9 @@ a {
     to {
         -webkit-box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px purple, 0 0 40px purple, 0 0 50px purple, 0 0 60px purple, 0 0 70px purple;
     }
-} */
+}
 
-/* @keyframes fade {
+@keyframes fade {
     0% {
         opacity: .18;
     }
