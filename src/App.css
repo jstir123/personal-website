@@ -1,12 +1,18 @@
 html, body, #root {
     min-height: 100vh;
     height: 100vh;
+    max-width: 100vw;
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
     overflow: hidden;
     color: #fff;
     font-size: calc(16px);
     font-family: 'Roboto', sans-serif;
+}
+
+body {
+    position: relative;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -65,21 +71,20 @@ a {
 }
 
 .twinkling {
-    width: 10000px;
+    width: 200vw;
     height: 100%;
-    background: transparent url(./images/twinkling.png) repeat;
-    background-size: 1000px 1000px;
+    background: transparent url(./images/twinkling.png);
     position: absolute;
     right: 0;
     top: 0;
     bottom: 0;
     z-index: -8;
     
-    -moz-animation: move-background 30s linear infinite;
-    -ms-animation: move-background 30s linear infinite;
-    -o-animation: move-background 30s linear infinite;
-    -webkit-animation: move-background 30s linear infinite;
-    animation: move-background 30s linear infinite;
+    -moz-animation: move-background 30s linear infinite alternate;
+    -ms-animation: move-background 30s linear infinite alternate;
+    -o-animation: move-background 30s linear infinite alternate;
+    -webkit-animation: move-background 30s linear infinite alternate;
+    animation: move-background 30s linear infinite alternate;
     
 }
 
@@ -124,7 +129,7 @@ a {
         -webkit-transform: translate3d(0px, 0px, 0px);
     }
     to { 
-        -webkit-transform: translate3d(1000px, 0px, 0px);
+        -webkit-transform: translate3d(100vw, 0px, 0px);
     }
 }
 
@@ -133,7 +138,7 @@ a {
         -webkit-transform: translate3d(0px, 0px, 0px);
     }
     to { 
-        -webkit-transform: translate3d(1000px, 0px, 0px);
+        -webkit-transform: translate3d(100vw, 0px, 0px);
     }
 }
 
@@ -142,7 +147,7 @@ a {
         -webkit-transform: translate3d(0px, 0px, 0px);
     }
     to { 
-        -webkit-transform: translate3d(1000px, 0px, 0px);
+        -webkit-transform: translate3d(100vw, 0px, 0px);
     }
 }
 
@@ -163,14 +168,6 @@ a {
       text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px purple, 0 0 40px purple, 0 0 50px purple, 0 0 60px purple, 0 0 70px purple;
     }
 }
-@keyframes glow {
-    from {
-      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px purple, 0 0 20px purple, 0 0 25px purple, 0 0 30px purple, 0 0 35px purple;
-    }
-    to {
-      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px purple, 0 0 40px purple, 0 0 50px purple, 0 0 60px purple, 0 0 70px purple;
-    }
-}
 
 @-webkit-keyframes glow {
     from {
@@ -179,9 +176,9 @@ a {
     to {
         -webkit-text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px purple, 0 0 40px purple, 0 0 50px purple, 0 0 60px purple, 0 0 70px purple;
     }
-}
+} */
 
-@keyframes box-glow {
+/* @keyframes box-glow {
     from {
       box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px purple, 0 0 20px purple, 0 0 25px purple, 0 0 30px purple, 0 0 35px purple;
     }
@@ -197,9 +194,9 @@ a {
     to {
         -webkit-box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px purple, 0 0 40px purple, 0 0 50px purple, 0 0 60px purple, 0 0 70px purple;
     }
-}
+} */
 
-@keyframes fade {
+/* @keyframes fade {
     0% {
         opacity: .18;
     }
@@ -208,18 +205,6 @@ a {
     }
     100% {
         opacity: .18;
-    }
-}
-
-@-webkit-keyframes fade {
-    0% {
-        -webkit-opacity: .18;
-    }
-    50% {
-        -webkit-opacity : .23;
-    }
-    100% {
-        -webkit-opacity: .18;
     }
 }
 
@@ -233,19 +218,7 @@ a {
     100% {
         filter: blur(100px);
     }
-}
-
-@-webkit-keyframes blur {
-    0% {
-        -webkit-filter: blur(100px);
-    }
-    50% {
-        -webkit-filter : blur(150px);
-    }
-    100% {
-        -webkit-filter: blur(100px);
-    }
-}
+} */
 
 @keyframes spin {
     from {

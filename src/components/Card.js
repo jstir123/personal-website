@@ -43,7 +43,8 @@ const useStyles = createUseStyles({
             transition: '.0s',
             '&:hover': {
                 color: '#fff',
-                animation: 'glow .03s ease-in-out infinite alternate',
+                textShadow: '0 0 10px #fff, 0 0 20px #fff, 0 0 30px purple, 0 0 40px purple, 0 0 50px purple, 0 0 60px purple, 0 0 70px purple',
+                // animation: 'glow .03s ease-in-out infinite alternate',
                 border: '3px solid orange'
             }
         }

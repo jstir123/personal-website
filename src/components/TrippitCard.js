@@ -4,7 +4,7 @@ import TrippitExample from '../images/trippit-example.png';
 
 const TrippitCard = () => {
     const title = 'Trippit.co';
-    const body = 'Trippit makes it easy to remember all of your favorite adventures! Keep track of what hotel you stayed at, where you ate, and what you enjoyed most. Best of all you can share your trips with friends in order to plan the next perfect getaway!';
+    const body = 'Checkout my main project! Built with React, Redux, and Django REST framework Trippit makes it easy to remember all of your favorite adventures. Keep track of what hotel you stayed at, where you ate, and what you enjoyed most. Best of all you can share your trips with friends in order to help them plan their next getaway!';
     const links = [
         {name: 'Website', path: 'https://www.trippit.co'},
         {name: 'GitHub', path: 'https://www.github.com/jstir123'}
@@ -19,7 +19,7 @@ const TrippitCard = () => {
         image: {
             position: 'absolute',
             bottom: '-30%',
-            left: '7%',
+            left: '4%',
             height: '120%',
             transform: 'rotate(-15deg)'
         }

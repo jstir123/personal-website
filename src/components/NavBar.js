@@ -36,9 +36,10 @@ const useStyles = createUseStyles({
         fontSize: '16pt',
         color: '#fff',
         padding: '19px 0',
-        transition: '0.75s',
+        transition: '0.5s',
         '&:hover': {
-            animation: 'glow .03s ease-in-out infinite alternate'
+            textShadow: '0 0 10px #fff, 0 0 20px #fff, 0 0 30px purple, 0 0 40px purple, 0 0 50px purple, 0 0 60px purple, 0 0 70px purple'
+            // animation: 'glow .03s ease-in-out infinite alternate'
         }
     },
     navIcon: {
@@ -108,7 +109,8 @@ const NavBar = () => {
     const email = 'jstir123@gmail.com';
     const activeStyle = {
         transform: 'scale(1.5)',
-        animation: 'glow .03s ease-in-out infinite alternate'
+        textShadow: '0 0 10px #fff, 0 0 20px #fff, 0 0 30px purple, 0 0 40px purple, 0 0 50px purple, 0 0 60px purple, 0 0 70px purple',
+        // animation: 'glow .03s ease-in-out infinite alternate'
     };
 
     const toggleMenu = () => {
@@ -121,7 +123,7 @@ const NavBar = () => {
             <div className={classes.container + ' ' + classes.justifyEnd + ' ' + classes.largeNav}>
                 <span className={classes.email}>{email}</span>
                 {socials.map(social => (
-                    <a href={social.path} target='_blank' rel='noopener noreferrer'>
+                    <a href={social.path} target='_blank' rel='noopener noreferrer' key={social.path}>
                         <img className={classes.navIcon} src={social.logo} alt=""/>
                     </a>
                 ))}
@@ -163,7 +165,7 @@ const NavBar = () => {
                 onClick={() => toggleMenu()}
                 style={{
                     visibility: menuOpen ? 'visible' : 'hidden',
-                    animation: menuOpen ? 'growDown 300ms ease-in-out forwards' : ''
+                    animation: menuOpen ? 'growDown 100ms ease-in-out forwards' : ''
                 }}
             >
                 <Dropdown links={links} socials={socials} email={email} />
