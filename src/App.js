@@ -5,6 +5,7 @@ import { createUseStyles } from 'react-jss';
 import Home from './pages/Home';
 import About from './pages/About';
 import Resume from './pages/Resume';
+import Projects from './pages/Projects';
 import NavBar from './components/NavBar';
 
 const useStyles = createUseStyles({
@@ -60,6 +61,10 @@ const App = () => {
 
                         <Route path='/resume'>
                             <Resume />
+                        </Route>
+
+                        <Route path='/projects'>
+                            <Projects />
                         </Route>
                         
                     </div>

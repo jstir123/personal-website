@@ -4,13 +4,12 @@ import { createUseStyles } from 'react-jss';
 const useStyles = createUseStyles({
     about: {
         textAlign: 'center',
-        maxWidth: '1275px',
-        margin: '5vh 4em',
+        maxWidth: '750px',
+        margin: '5vh auto',
         padding: '1.5em',
         boxSizing: 'border-box',
         border: '2pt solid #fff',
         borderRadius: '10px',
-        overflowY: 'scroll'
     },
     text: {
         height: 'auto',
