@@ -108,7 +108,7 @@ const NavBar = () => {
     ];
     const email = 'jstir123@gmail.com';
     const activeStyle = {
-        transform: 'scale(1.5)',
+        transform: 'scale(1.25)',
         textShadow: '0 0 10px #fff, 0 0 20px #fff, 0 0 30px purple, 0 0 40px purple, 0 0 50px purple, 0 0 60px purple, 0 0 70px purple',
         // animation: 'glow .03s ease-in-out infinite alternate'
     };

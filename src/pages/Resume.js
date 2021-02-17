@@ -22,7 +22,7 @@ const Resume = () => {
                 title='Resume'
                 src={ResumePDF}
                 width='100%'
-                height='99%'
+                height='100%'
                 frameborder='0'
                 style={{border: 'none'}}
             />
