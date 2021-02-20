@@ -48,9 +48,9 @@ const App = () => {
                 <div className={classes.navbar}>
                     <NavBar />
                 </div>
-
-                <Switch>
-                    <div className={classes.content}>
+                
+                <div className={classes.content}>
+                    <Switch>
 
                         <Route exact path='/'>
                             <Home />
@@ -68,14 +68,12 @@ const App = () => {
                             <Projects />
                         </Route>
 
-                        <Route path='/404'>
+                        <Route>
                             <NotFound />
                         </Route>
 
-                        <Redirect to="/404" />
-                        
-                    </div>
-                </Switch>
+                    </Switch>
+                </div>
                 
             </div>
         </Router>
