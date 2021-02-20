@@ -98,7 +98,6 @@ a {
     filter: blur(100px);
     height: 35%;
     max-height: 400px;
-    /* animation: fade 7s linear infinite, blur 9s linear infinite; */
     z-index: -6;
 }
 
@@ -126,39 +125,39 @@ a {
 
 @keyframes move-background {
     from {
-        -webkit-transform: translate3d(0px, 0px, 0px);
+        -webkit-transform: translateX(0px);
     }
     to { 
-        -webkit-transform: translate3d(100vw, 0px, 0px);
+        -webkit-transform:  translateX(100vw);
     }
 }
 
 @-webkit-keyframes move-background {
     from {
-        -webkit-transform: translate3d(0px, 0px, 0px);
+        -webkit-transform: translateX(0px);
     }
     to { 
-        -webkit-transform: translate3d(100vw, 0px, 0px);
+        -webkit-transform:  translateX(100vw);
     }
 }
 
 @-moz-keyframes move-background {    
     from {
-        -webkit-transform: translate3d(0px, 0px, 0px);
+        -webkit-transform: translateX(0px);
     }
     to { 
-        -webkit-transform: translate3d(100vw, 0px, 0px);
+        -webkit-transform:  translateX(100vw);
     }
 }
 
-@keyframes enter-about-me {
+/* @keyframes enter-about-me {
     from {
         top: 800px; -webkit-transform: translate3d(0px, 0px, 0px) rotateX(20deg);
     }
     to { 
         top: -5000px; -webkit-transform: translate3d(0px, 0px, -2500px) rotateX(25deg);
     }
-}
+} */
 
 /* @keyframes glow {
     from {

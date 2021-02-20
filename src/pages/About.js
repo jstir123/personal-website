@@ -12,8 +12,6 @@ const useStyles = createUseStyles({
         borderRadius: '10px',
     },
     text: {
-        height: 'auto',
-        textAlign: 'justify',
         '& p': {
             margin: '1em 0'
         }
@@ -28,16 +26,16 @@ const About = () => {
             <h2>About Me</h2>
             <div className={classes.text}>
                 <p>
-                    Hi I’m JT Stirling! I’m a self taught developer in Fort Lauderdale, FL. A little over two years ago I began coding. It started with an introductory training at work. My company was looking for employees interested in learning about Robotic Process Automation (RPA), and I jumped at the opportunity to try something new. I ended up forming an interest that sparked two years of learning and exploration.
+                    Hi, I’m JT Stirling. I’m a self taught software developer in Fort Lauderdale, FL. In 2018 I graduated from Miami University of Ohio with a BS in Finance. I then started working as a Business Process Improvement Consultant at Protiviti. I greatly value all that I have learned as a consultant, but over the past two years I have gravitated towards a more technical role.
                 </p>
                 <p>
-                    I went on to obtain an Accredited RPA Developer certification from Blue Prism, but I wanted to be able to do more. I started teaching myself to code in the evenings and on weekends. I spent countless hours in online classes; everything from Intro to JavaScript on Codecademy to learning about data structures and algorithms through MITx. I took every chance I could to further my knowledge and skill set.
+                    It started with an introductory training at work. Protiviti was looking for individuals interested in learning about Robotic Process Automation (RPA). I was, and I went on to obtain an Accredited RPA Developer certification. I also began learning how to code in my free time. I spent hours in online classes; everything from Intro to JavaScript on Codecademy to learning about data structures and algorithms through MITx. However, most of my learning came from my experience building Trippit, a web app that allows users to keep track of and share their past trips.
                 </p>
                 <p>
-                    Initially, most of the code I was writing was for personal projects. However, I ended up getting in touch with some colleagues in my company’s Intelligent Automation practice. They needed someone who knew Python, and I was happy to help. I was able to deliver results that exceeded their expectations, and was quickly welcomed as a member of the team. Since then I have continued to help out with automation initiatives, and I have even put my web development skills into practice by building a prototype of a website that will serve as the “hub” for users to access all of the team’s automation tools.
+                    Over the past few months I’ve also been working closely with Protiviti’s Intelligent Automation team. As a new member of the team I have contributed numerous Python scripts, while maintaining my responsibilities on client projects. Most recently, I built a prototype of a website that will serve as a “hub” for all of our automation tools.
                 </p>
                 <p>
-                    I still have a lot to learn, but that is precisely why coding has become one of my passions. The field is always innovating, and always challenging us to keep up. There is always an opportunity to solve a problem, and always room to improve.
+                    While I am thankful for the opportunities that I have had with Protiviti, I am excited to move on to a new role that will allow me to focus on software development. I am looking for a position that values teamwork, problem solving, and continuous growth. With my business background and the soft skills that I have learned throughout my consulting career I believe that I will bring a diverse perspective to any team.
                 </p>
             </div>
         </div>

@@ -10,7 +10,7 @@ const useStyles = createUseStyles({
         margin: 'auto',
         maxWidth: '1275px',
         boxSizing: 'border-box'
-    },
+    }
 })
 
 const Resume = () => {
@@ -24,6 +24,7 @@ const Resume = () => {
                 width='100%'
                 height='100%'
                 frameborder='0'
+                allowtransparency="true"
                 style={{border: 'none'}}
             />
         </div>

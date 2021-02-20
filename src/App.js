@@ -1,11 +1,12 @@
 import './App.css';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import { createUseStyles } from 'react-jss';
 
 import Home from './pages/Home';
 import About from './pages/About';
 import Resume from './pages/Resume';
 import Projects from './pages/Projects';
+import NotFound from './pages/NotFound';
 import NavBar from './components/NavBar';
 
 const useStyles = createUseStyles({
@@ -66,6 +67,12 @@ const App = () => {
                         <Route path='/projects'>
                             <Projects />
                         </Route>
+
+                        <Route path='/404'>
+                            <NotFound />
+                        </Route>
+
+                        <Redirect to="/404" />
                         
                     </div>
                 </Switch>

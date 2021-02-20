@@ -11,7 +11,7 @@ const useStyles = createUseStyles({
         overflow: 'hidden',
         boxSizing: 'border-box',
         minWidth: '360px',
-        margin: '5vh 0'
+        margin: '5vh auto'
     },
     imageContainer: {
         width: '40%'
@@ -71,11 +71,11 @@ const Card = ({ image, title, body, links, styles }) => {
 
     return (
         <div className={classes.card} style={styles.card}>
-            <div className={classes.imageContainer}>
+            <div className={classes.imageContainer} style={styles.imageContainer}>
                 <img className={classes.image} src={image} alt="" style={styles.image}/>
             </div>
-            <div className={classes.content}>
-                <h3 >
+            <div className={classes.content} style={styles.content}>
+                <h3 style={styles.header}>
                     {title}
                 </h3>
                 <p>
@@ -83,7 +83,7 @@ const Card = ({ image, title, body, links, styles }) => {
                 </p>
                 <div className={classes.links}>
                     {links.map(link => (
-                        <a href={link.path} target='_blank' rel='noopener noreferrer' key={link.name}>
+                        <a href={link.path} target='_blank' rel='noopener noreferrer' key={link.path}>
                             <button>
                                 {link.name}
                             </button>

@@ -5,49 +5,14 @@ import { createUseStyles } from 'react-jss';
 const useStyles = createUseStyles({
     projects: {
         maxWidth: '1275px',
-        margin: '5vh 4em',
+        margin: '5vh auto',
         textAlign: 'center'
     },
     header: {
         marginBottom: '5vh'
     },
-    card: {
-        height: 'auto',
-        width: '100%',
-        margin: 'auto',
-        marginBottom: '3em',
-        maxWidth: '700px',
-        border: '2pt solid #fff',
-        borderRadius: '10px'
-    },
-    content: {
-        width: '100%',
-        textAlign: 'center',
-        padding: '1.5em',
-        minWidth: '300px',
-        boxSizing: 'border-box',
-        '& h3': {
-            marginBottom: '15px'
-        }
-    },
-    links: {
-        '& button': {
-            color: 'orange',
-            background: 'transparent',
-            border: '2px solid orange',
-            borderRadius: '25px',
-            height: '40px',
-            width: '115px',
-            margin: '1.5em 7px 0px 7px',
-            fontSize: '1.1em',
-            cursor: 'pointer',
-            transition: '0',
-            '&:hover': {
-                color: '#fff',
-                textShadow: '0 0 10px #fff, 0 0 20px #fff, 0 0 30px purple, 0 0 40px purple, 0 0 50px purple, 0 0 60px purple, 0 0 70px purple',
-                transform: 'scale(1.03)'
-            }
-        }
+    cards: {
+        margin: '0 4em'
     }
 })
 
@@ -62,28 +27,37 @@ const Projects = () => {
             .catch(err => console.log(err))
     }, [])
 
+    const styles = {
+        card: {
+            height: 'auto',
+            width: '100%',
+            maxWidth: '700px'
+        },
+        imageContainer: {
+            display: 'none'
+        },
+        content: {
+            width: '100%'
+        },
+        header: {
+            textTransform: 'capitalize'
+        }
+    }
+
     return (
         <div className={classes.projects}>
             <h2 className={classes.header}>Projects</h2>
-            {projects.map(project => (
-                <div className={classes.card} key={project.id}>
-                    <div className={classes.content}>
-                        <h3 >
-                            {project.name}
-                        </h3>
-                        <p>
-                            {project.description}
-                        </p>
-                        <div className={classes.links}>
-                            <a href={project.html_url} target='_blank' rel='noopener noreferrer'>
-                                <button>
-                                    GitHub
-                                </button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            ))}
+            <div className={classes.cards}>
+                {projects.map(project => (
+                    <Card
+                        title={project.name.replace('-', ' ')}
+                        body={project.description}
+                        links={[{name: 'GitHub', path: project.html_url}]}
+                        styles={styles}
+                        key={project.id}
+                    />
+                ))}
+            </div>
         </div>
     );
 }
