@@ -32,7 +32,7 @@ const useStyles = createUseStyles({
     links: {
         '& button': {
             color: 'orange',
-            background: '#000',
+            background: 'transparent',
             border: '2px solid orange',
             borderRadius: '25px',
             height: '40px',

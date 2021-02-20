@@ -3,7 +3,9 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { createUseStyles } from 'react-jss';
 
 import Home from './pages/Home';
+import About from './pages/About';
 import Resume from './pages/Resume';
+import Projects from './pages/Projects';
 import NavBar from './components/NavBar';
 
 const useStyles = createUseStyles({
@@ -21,6 +23,8 @@ const useStyles = createUseStyles({
     content: {
         height: '100%',
         paddingTop: 70,
+        marginBottom: 70,
+        boxSizing: 'border-box',
         background: 'transparent',
         zIndex: 2,
         overflowY: 'auto',
@@ -51,8 +55,16 @@ const App = () => {
                             <Home />
                         </Route>
 
+                        <Route path='/about'>
+                            <About />
+                        </Route>
+
                         <Route path='/resume'>
                             <Resume />
+                        </Route>
+
+                        <Route path='/projects'>
+                            <Projects />
                         </Route>
                         
                     </div>
