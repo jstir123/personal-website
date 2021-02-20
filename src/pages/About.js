@@ -6,6 +6,7 @@ const useStyles = createUseStyles({
         textAlign: 'center',
         maxWidth: '750px',
         margin: '5vh auto',
+        marginBottom: '150px',
         padding: '1.5em',
         boxSizing: 'border-box',
         border: '2pt solid #fff',

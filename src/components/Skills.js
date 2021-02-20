@@ -10,6 +10,7 @@ const useStyles = createUseStyles({
         width: '40%',
         textAlign: 'center',
         margin: '5vh 0',
+        marginBottom: '150px',
         minWidth: '450px'
     },
     logos: {

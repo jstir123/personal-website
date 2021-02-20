@@ -6,13 +6,20 @@ const useStyles = createUseStyles({
     projects: {
         maxWidth: '1275px',
         margin: '5vh auto',
-        textAlign: 'center'
+        marginBottom: '150px',
+        textAlign: 'center',
+        boxSizing: 'border-box'
     },
     header: {
         marginBottom: '5vh'
     },
     cards: {
-        margin: '0 4em'
+        display: 'flex',
+        flexWrap: 'wrap',
+        justifyContent: 'center',
+        alignItems: 'center',
+        margin: '0 4em',
+        boxSizing: 'border-box'
     }
 })
 

@@ -24,7 +24,7 @@ const useStyles = createUseStyles({
     content: {
         height: '100%',
         paddingTop: 70,
-        marginBottom: 70,
+        paddingBottom: 70,
         boxSizing: 'border-box',
         background: 'transparent',
         zIndex: 2,
